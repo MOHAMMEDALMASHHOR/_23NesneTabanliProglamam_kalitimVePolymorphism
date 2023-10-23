@@ -1,0 +1,25 @@
+@startuml name
+title Employee
+class Object{
+
+}
+class Employee{
+    -Id
+    -FirstName
+    -LastName
+    +Work():void
+}
+class Manager{
+    -Income
+}
+class ManagerAssistant{
+    -Salary
+}
+class Worker{
+    -WhatWork
+}
+Employee -up-|> Object
+Manager -up-|> Employee
+ManagerAssistant -up-|> Manager
+Worker-up-|> Employee
+@enduml
